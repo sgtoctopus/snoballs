@@ -1,344 +1,331 @@
-        @charset "UTF-8";
-        /* resets */
+@charset "UTF-8";
 
-        * {
-            margin: 0;
-            padding: 0;
-            border: 0;
-            box-sizing: border-box;
-        }
+/* resets */
 
-        *:before, *:after {
-            box-sizing: border-box;
-        }
-        /* ----------- GENERAL --------- */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
 
-        body {
-            background-color: #3fbf9d;
-            font-family: Helvetica, Arial, sans-serif;
-            font-size: 1em;
-            line-height: 1.5em;
-            min-height: 100%;
-            background-image: url("images/snow.png");
-        }
+*:before, *:after {
+    box-sizing: border-box;
+}
 
-        a {
-            color: rgb(8, 185, 203);
-            text-decoration: none;
-        }
 
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Life Savers', cursive;
-            letter-spacing: .15em;
-            margin: 1.25em 0 .5em 0;
-        }
+/* ---------------------------------- GENERAL -------------------------------- */
 
-        #wrapper {
-            position: relative;
-            width: 75%;
-            min-width: 900px;
-            max-width: 1100px;
-            margin: auto;
-            top: .5em;
-        }
+body {
+    background-color: #3fbf9d;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    line-height: 1.5em;
+    background-image: url("images/snow.png");
+}
 
-        .stripe {
-            width: 100%;
-            height: 40px;
-            top: 38%;
-            position: absolute;
-            background-color: rgb(241, 230, 87);
-        }
+a {
+    color: rgb(8, 185, 203);
+    text-decoration: none;
+}
 
-        .stripe:nth-of-type(1) {
-            top: 43%;
-        }
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Life Savers', cursive;
+    letter-spacing: .15em;
+    margin: 1.25em 0 .5em 0;
+}
 
-        .stripe:nth-last-of-type(2) {
-            top: 48%;
-        }
-        /* ---------- HEADER --------- */
+#wrapper {
+    position: relative;
+    width: 75%;
+    min-width: 900px;
+    max-width: 1100px;
+    margin: auto;
+    top: .5em;
+}
 
-        header {
-            position: relative;
-            color: #fff;
-            background-color: #FF729F;
-            margin: auto;
-            width: 93%;
-            min-height: 32em;
-            z-index: 0;
-            border-radius: 50em 50em 0 0;
-            -moz-border-radius: 50%;
-            border-top: .01em solid white;
-        }
+.stripe {
+    width: 100%;
+    height: 40px;
+    top: 38%;
+    position: absolute;
+    background-color: rgb(241, 230, 87);
+}
 
-        header img {
-            margin: 4% 0 0 12%;
-            position: absolute;
-        }
+.stripe:nth-of-type(1) {
+    top: 43%;
+}
 
-        header p {
-            float: right;
-            position: absolute;
-            top: 45%;
-            right: 10%;
-            font-size: .8em;
-            font-family: 'Life Savers', cursive;
-        }
-        /* ------------------ NAV -------------------- */
+.stripe:nth-last-of-type(2) {
+    top: 48%;
+}
 
-        nav {
-            height: 5em;
-            width: 100%;
-            line-height: 5.25em;
-            margin-top: -14.5em;
-            background-color: white;
-            clip-path: polygon( 0 0, 100% 0, 99% 100%, 1% 100%);
-            -webkit-clip-path: polygon( 0 0, 100% 0, 99% 100%, 1% 100%);
-            -moz-clip-path: polygon( 0 0, 100% 0, 99% 100%, 1% 100%);
-            text-align: center;
-        }
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
 
-        nav li {
-            width: 5em;
-            font-family: 'Life Savers', cursive;
-            font-size: 1.2em;
-            line-height: 3em;
-            margin: .25em 2em;
-            display: inline-block;
-            letter-spacing: .05em;
-        }
+/* ---------------------------------- HEADER -------------------------------- */
 
-        nav a {
-            text-decoration: none;
-            display: block;
-            transition: .3s background-color;
-            width: 8em;
-        }
+header {
+    background-color: #FF729F;
+    border-top: .15em solid white;
+    height: 50em;
+    width: 92%;
+    border-radius: 50em;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    margin: auto;
+    color: #fff;
+}
 
-        nav a:hover {
-            background-image: url("images/spoon-inverse.png");
-            background-repeat: no-repeat;
-            background-position: bottom right;
-        }
+header img {
+    margin: 4% 0 0 12%;
+    position: absolute;
+}
 
-        nav a.active {
-            font-weight: bold;
-            background-image: url("images/spoon.png");
-            background-repeat: no-repeat;
-            background-position: bottom right;
-        }
+header p {
+    float: right;
+    position: absolute;
+    top: 20em;
+    right: 10%;
+    font-size: .8em;
+    font-family: 'Life Savers', Courier, cursive;
+}
 
-        nav a.active:hover {
-            font-weight: bold;
-            background-image: url("images/spoon-inverse.png");
-            background-repeat: no-repeat;
-            background-position: bottom right;
-        }
-        /* ------------------- CONTENT --------------------- */
 
-        #content {
-            width: 96%;
-            overflow: hidden;
-            min-height: 20em;
-            margin: 0 auto 2em auto;
-            padding: 0em .75em 0em 0em;
-            background: white;
-            border-top: .25em groove rgb(212, 238, 251);
-            overflow: hidden;
-            clip-path: polygon( 0 0, 100% 0, 93% 100%, 7% 100%);
-            -webkit-clip-path: polygon( 0 0, 100% 0, 93% 100%, 7% 100%);
-            -moz-clip-path: polygon( 0 0, 100% 0, 93% 100%, 7% 100%);
-        }
+/* ----------------------------------- NAV ---------------------------------- */
 
-        #content img {
-            width: 20em;
-            display: block;
-            margin: 0 auto 2em auto;
-        }
+nav {
+    height: 5em;
+    width: 100%;
+    line-height: 5.25em;
+    margin-top: -32em;
+    background-color: white;
+    clip-path: polygon( 0 0, 100% 0, 99% 100%, 1% 100%);
+    -webkit-clip-path: polygon( 0 0, 100% 0, 99% 100%, 1% 100%);
+    -moz-clip-path: polygon( 0 0, 100% 0, 99% 100%, 1% 100%);
+    text-align: center;
+}
 
-        #sidebar {
-            width: 30%;
-            float: left;
-            height: 100%;
-            min-height: 70em;
-            background-color: #f4f7f9;
-            border-right: 5em solid #eaf5fa;
-            padding: 0 0 0 1.75em;
-            margin: 0;
-            /* TEXT FORMATTING */
-            font-size: .8rem;
-            text-align: right;
-            color: rgb(10, 70, 101);
-        }
+nav li {
+    width: 5em;
+    font-family: 'Life Savers', Courier, cursive;
+    font-size: 1.2em;
+    line-height: 3em;
+    margin: .25em 2em;
+    display: inline-block;
+    letter-spacing: .05em;
+}
 
-        #sidecontent {
-            margin: 3.8em -3em 0 0;
-        }
+nav a {
+    text-decoration: none;
+    display: block;
+    transition: .3s background-color;
+    width: 8em;
+}
 
-        #maincol {
-            width: 70%;
-            min-height: 20em;
-            float: right;
-            position: relative;
-            padding: 1em 4em 0em 2em;
-            margin: 0 0 1em 0;
-        }
+nav a:hover {
+    background-image: url("images/spoon-inverse.png");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
 
-        footer {
-            clear: both;
-            text-align: center;
-            padding: .5em;
-            margin: 0;
-            width: 100%;
-            border-top: .15em solid rgb(212, 238, 251);
-            text-align: center;
-        }
+nav a.active {
+    font-weight: bold;
+    background-image: url("images/spoon.png");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
 
-        footer li {
-            font-family: 'Life Savers', cursive;
-            font-size: .5em;
-            padding: 0;
-            margin: 0;
-        }
+nav a.active:hover {
+    font-weight: bold;
+    background-image: url("images/spoon-inverse.png");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
 
-        footer a {
-            text-decoration: none;
-            display: block;
-            transition: .3s background-color;
-        }
 
-        footer a:hover {
-            background-color: rgb(17, 180, 203);
-            color: rgb(228, 223, 108);
-        }
+/* ---------------------------------- CONTENT -------------------------------- */
 
-        footer a.active {
-            font-weight: bold;
-        }
+#content {
+    width: 96%;
+    overflow: hidden;
+    min-height: 10em;
+    margin: 0 auto 2em auto;
+    padding: 0em .75em 0em 0em;
+    background: white;
+    border-top: .25em groove rgb(212, 238, 251);
+    overflow: hidden;
+    clip-path: polygon( 0 0, 100% 0, 93% 100%, 7% 100%);
+    -webkit-clip-path: polygon( 0 0, 100% 0, 93% 100%, 7% 100%);
+    -moz-clip-path: polygon( 0 0, 100% 0, 93% 100%, 7% 100%);
+}
 
-        @media screen and (min-width: 600px) {
-            footer li {
-                width: 6em;
-                border-bottom: none;
-                line-height: 2em;
-                letter-spacing: .15em;
-                font-size: .8em;
-            }
-            footer li {
-                display: inline-block;
-            }
-        }
-        /* ----------------- MENU ------------------ */
+#content img {
+    width: 20em;
+    display: block;
+    margin: 0 auto 2em auto;
+}
 
-        table {
-            border-collapse: collapse;
-        }
 
-        caption {
-            text-align: left;
-            font-family: 'Life Savers', cursive;
-            letter-spacing: .15em;
-            margin: .5em 0 0 0;
-            font-size: 1.25em;
-            font-weight: bold;
-            padding: 1em 0 .5em 0;
-            border-top: .15em solid rgb(212, 238, 251);
-        }
+/* --------------------------------- SIDEBAR -------------------------------- */
 
-        #sidebar table {
-            width: 75%;
-            margin: 0 25%;
-            text-align: left;
-        }
+#sidebar {
+    width: 30%;
+    float: left;
+    height: 100%;
+    min-height: 35em;
+    background-color: #f4f7f9;
+    border-right: 5em solid #eaf5fa;
+    padding: 0 0 0 1.75em;
+    margin: 0;
+    /* TEXT FORMATTING */
+    font-size: .75em;
+    text-align: right;
+    color: rgb(10, 70, 101);
+}
 
-        .flavors {
-            width: 100%;
-            text-align: center;
-        }
+#sidecontent {
+    margin: 3.8em -3em 0 0;
+}
 
-        .flavors td {
-            padding: 0;
-            width: 33.3%;
-            box-shadow: none;
-            height: 2.45em;
-            font-size: .8em;
-        }
 
-        .flavors td:hover {
-            background-image: url("images/snowball.png");
-            font-size: .8em;
-            padding: 0;
-            margin: 0;
-            color: #ffffff;
-            letter-spacing: .2em;
-            border-radius: 3em;
-            text-shadow: .05em .05em .2em #000000;
-            text-transform: uppercase;
-            font-weight: bold;
-        }
+/* ----------------------------------- MAIN --------------------------------- */
 
-        .plus {
-            background-image: url("images/plus.png");
-            background-repeat: no-repeat;
-            background-position: 50% 50%;
-            width: 5%;
-        }
+#maincol {
+    width: 70%;
+    /*min-height: 20em;*/
+    float: right;
+    position: relative;
+    padding: 1em 4em 0em 2em;
+    margin: 0 0 1em 0;
+}
 
-        #combo {
-            width: 75%;
-            padding: 0;
-            margin: 0;
-        }
 
-        #combo th {
-            text-align: left;
-            padding-top: .5em;
-        }
+/* --------------------------------- FOOTER --------------------------------- */
 
-        #combo td {
-            text-align: center;
-            font-size: .85em;
-            padding: 0;
-            margin: 0;
-            min-width: 30px;
-        }
-        /* --------------- BLOCKQUOTE ------------------- */
+footer {
+    clear: both;
+    text-align: center;
+    padding: .5em;
+    margin: 0;
+    width: 100%;
+    border-top: .15em solid rgb(212, 238, 251);
+    text-align: center;
+}
 
-        cite {
-            font-size: .9em;
-            font-weight: bold;
-            font-family: 'Life Savers', cursive;
-            letter-spacing: .15em;
-            display: block;
-            text-align: right;
-            bottom: 0;
-            padding: 0;
-            margin: 0 -3em 0em 1em;
-            bottom: 0;
-        }
+footer li {
+    font-family: 'Life Savers', cursive;
+    font-size: .5em;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    width: 6em;
+    border-bottom: none;
+    line-height: 2em;
+    letter-spacing: .15em;
+    font-size: .8em;
+}
 
-        blockquote {
-            position: relative;
-            width: 90%;
-            padding: 2em 2em;
-            margin: 2em auto;
-            text-align: right;
-            border-radius: 7em;
-            color: rgb(10, 70, 101);
-            background-image: url("images/snowball.png");
-            background-repeat: repeat;
-            box-shadow: 0 0 .75em .75em white inset;
-        }
-        /* --------------------- MAP ------------------------- */
+footer a {
+    text-decoration: none;
+    display: block;
+    transition: .3s background-color;
+}
 
-        iframe {
-            margin: 0 0 0 0;
-            width: 100%;
-        }
+footer a:hover {
+    background-color: rgb(17, 180, 203);
+    color: rgb(228, 223, 108);
+}
+
+footer a.active {
+    font-weight: bold;
+}
+
+
+/* --------------------------------- TABLES --------------------------------- */
+
+table {
+    border-collapse: collapse;
+}
+
+caption {
+    text-align: left;
+    font-family: 'Life Savers', cursive;
+    letter-spacing: .15em;
+    margin: .5em 0 0 0;
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 1em 0 .5em 0;
+    border-top: .15em solid rgb(212, 238, 251);
+}
+
+
+/* -------------------------------- FLAVORS --------------------------------- */
+
+.flavors {
+    width: 100%;
+    text-align: center;
+}
+
+.flavors td {
+    padding: 0;
+    width: 33.3%;
+    box-shadow: none;
+    height: 2.45em;
+    font-size: .8em;
+}
+
+.flavors td:hover {
+    background-image: url("images/snowball.png");
+    font-size: .8em;
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+    letter-spacing: .2em;
+    border-radius: 3em;
+    text-shadow: .05em .05em .2em #000000;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+/* ------------------------------ BLOCKQUOTE -------------------------------- */
+
+cite {
+    font-size: .9em;
+    font-weight: bold;
+    font-family: 'Life Savers', cursive;
+    letter-spacing: .15em;
+    display: block;
+    text-align: right;
+    bottom: 0;
+    padding: 0;
+    margin: 0 -3em 0em 1em;
+    bottom: 0;
+}
+
+blockquote {
+    position: relative;
+    width: 90%;
+    padding: 2em 2em;
+    margin: 2em auto;
+    text-align: right;
+    border-radius: 7em;
+    color: rgb(10, 70, 101);
+    background-image: url("images/snowball.png");
+    background-repeat: repeat;
+    box-shadow: 0 0 .75em .75em white inset;
+}
+
+
+/* ---------------------------------- MAP ----------------------------------- */
+
+iframe {
+    margin: 0 0 0 0;
+    width: 100%;
+}
