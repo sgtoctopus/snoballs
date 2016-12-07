@@ -1,0 +1,395 @@
+<html>
+
+<head>
+    <title>Famous New Orleans Sno-Balls</title>
+
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Damion" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Life+Savers" rel="stylesheet">
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="randomColor.js"></script>
+
+    <script language="JavaScript" type="text/javascript">
+        $(document).ready(function() {
+            $(".flavors tr td").hover(function() {
+                    var r = Math.floor(Math.random() * 255);
+                    var g = Math.floor(Math.random() * 255);
+                    var b = Math.floor(Math.random() * 255);
+                    // var color = "rgb(" + r + "," + g + "," + b + ")"
+                    var color = randomColor({
+                        luminosity: 'light'
+                    });
+                    $(this).css("background-color", color);
+                    $(this).css("background-position", (Math.random() * 100));
+                },
+
+                function() {
+                    $(this).css({
+                        "background-color": "white"
+                    });
+                });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="stripe"></div>
+    <div class="stripe"></div>
+    <div class="stripe"></div>
+
+    <div id="wrapper">
+        <header>
+            <a href="index.html"><img src="images/Logo.png" alt="Famous New Orleans Sno-Balls"></a>
+            <p>
+                Open everyday 1-7 PM!
+            </p>
+        </header>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="menu.html" class="active">Menu</a>
+                </li>
+                <li>
+                    <a href="location.html">Directions</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="content">
+            <div id="sidebar">
+                <div id="sidecontent">
+                    <h2>Price</h2>
+                    <p>
+                        per cup (+cream)
+                    </p>
+                    <ul>
+                        <li>
+                            <h4>Small</h4>$1.80 (+0.60)
+                        </li>
+                        <li>
+                            <h4>Medium</h4> $2.50 (+0.80)
+                        </li>
+                        <li>
+                            <h4>Large</h4> $3.00 (+0.90)
+                        </li>
+                        <li>
+                            <h4>X-Large</h4> $3.25 (+1.00)
+                        </li>
+                        <li>
+                            <h4>Monster</h4> $5.75 (+1.25)
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <!--end of sidebar-->
+
+
+            <div id="maincol">
+                <h2>Menu</h2>
+                <p>
+                    Pick from one of our many favors or combine two and create your own!
+                </p>
+                <table class="flavors">
+                    <caption>
+                        Basic Flavors
+                    </caption>
+                    <tbody>
+                        <tr>
+                            <td>Bahama Mama</td>
+                            <td>Banana</td>
+                            <td>Barney</td>
+                        </tr>
+                        <tr>
+                            <td>Birthday Cake</td>
+                            <td>Blackberry</td>
+                            <td>Blueberry</td>
+                        </tr>
+                        <tr>
+                            <td>Blueberry-Cheesecake</td>
+                            <td>Blue Hawaiian</td>
+                            <td>Blue Raspberry</td>
+                        </tr>
+                        <tr>
+                            <td>Bubble Gum</td>
+                            <td>Cake Batter</td>
+                            <td>Candy Apple</td>
+                        </tr>
+                        <tr>
+                            <td>Cajun Red Hot</td>
+                            <td>Cappuccino Cream</td>
+                            <td>Cherry</td>
+                        </tr>
+                        <tr>
+                            <td>Cherry Cheesecake</td>
+                            <td>Cherry Limeade</td>
+                            <td>Chocolate</td>
+                        </tr>
+                        <tr>
+                            <td>Cinnamon</td>
+                            <td>Cotton Candy</td>
+                            <td>Cream Soda</td>
+                        </tr>
+                        <tr>
+                            <td>Creole Cream Cheese</td>
+                            <td>Fuzzy Navel</td>
+                            <td>Grape</td>
+                        </tr>
+                        <tr>
+                            <td>Green Apple</td>
+                            <td>Hawaiian Punch</td>
+                            <td>Hurricane</td>
+                        </tr>
+                        <tr>
+                            <td>Haley's Comet</td>
+                            <td>Ice Cream</td>
+                            <td>King Cake</td>
+                        </tr>
+                        <tr>
+                            <td>Kiwi</td>
+                            <td>Lemon-Lime</td>
+                            <td>Lime</td>
+                        </tr>
+                        <tr>
+                            <td>Mango</td>
+                            <td>Margarita</td>
+                            <td>Nectar</td>
+                        </tr>
+                        <tr>
+                            <td>Orange</td>
+                            <td>Orchid Vanilla</td>
+                            <td>Peach</td>
+                        </tr>
+                        <tr>
+                            <td>Peach Cobblerz</td>
+                            <td>Pineapple</td>
+                            <td>Pink Bubble Gum</td>
+                        </tr>
+                        <tr>
+                            <td>Pink Lemonade</td>
+                            <td>Polar Punch</td>
+                            <td>Popeye</td>
+                        </tr>
+                        <tr>
+                            <td>Praline & Cream</td>
+                            <td>Raspberry</td>
+                            <td>Root Beer</td>
+                        </tr>
+                        <tr>
+                            <td>Sour Blue Raspberry</td>
+                            <td>Sour Cherry</td>
+                            <td>Sour Grape</td>
+                        </tr>
+                        <tr>
+                            <td>Sour Watermelon</td>
+                            <td>Spearmint</td>
+                            <td>Strawberry</td>
+                        </tr>
+                        <tr>
+                            <td>Strawberry Cheesecake</td>
+                            <td>Strawberry Daiquiri</td>
+                            <td>Tigers Blood</td>
+                        </tr>
+                        <tr>
+                            <td>Tutti Frutti</td>
+                            <td>Watermelon</td>
+                            <td>Wild Cherry</td>
+                        </tr>
+                        <tr>
+                            <td>Wild Strawberry</td>
+                            <td>Wine Cooler</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="flavors">
+                    <caption>
+                        Clear Sno-Balls
+                    </caption>
+                    <tbody>
+                        <tr>
+                            <td>Almond Joy</td>
+                            <td>Bubble Gum</td>
+                            <td>Strawberry</td>
+                        </tr>
+                        <tr>
+                            <td>Coconut</td>
+                            <td>Lemon Juice</td>
+                            <td>Pina Colada</td>
+                        </tr>
+                        <tr>
+                            <td>Silver Fox</td>
+                            <td>Wedding Cake</td>
+                            <td>White Chocolate-Chip</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- <table id="combo">
+                    <caption>
+                        Combinations
+                    </caption>
+                    <tbody>
+                        <tr>
+                            <th colspan=4>Barbie</th>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>Orchid Vanilla</td>
+                            <td class="plus">&nbsp;</td>
+                            <td>Cotton Candy</td>
+                        </tr>
+                        <tr>
+                            <th colspan=4>Blackberry Cobbler</th>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>Blackberry</td>
+                            <td class="plus">&nbsp;</td>
+                            <td>Cake Batter</td>
+                        </tr>
+                        <tr>
+                            <th colspan=4>Dream Cycle</th>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>Ice Cream</td>
+                            <td class="plus">&nbsp;</td>
+                            <td>Orange</td>
+                        </tr>
+                        <tr>
+                            <th colspan=4>Frappuccino</th>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>Cappuccino</td>
+                            <td class="plus">&nbsp;</td>
+                            <td>Chocolate
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan=4>Pink Eye</th>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>Pink Lemonade</td>
+                            <td class="plus">&nbsp;</td>
+                            <td>Popeye
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan=4>Pink Flamingo</th>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>Bahama Mama</td>
+                            <td class="plus">&nbsp;</td>
+                            <td>Ice Cream</td>
+                        </tr>
+                        <tr>
+                            <th colspan=4>Pink Lady</th>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>Nector</td>
+                            <td class="plus">&nbsp;</td>
+                            <td>Cream</td>
+                        </tr>
+                        <tr>
+                            <th colspan=4>Pretty Princess</th>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>Polar Punch</td>
+                            <td class="plus">&nbsp;</td>
+                            <td>Pink Limonade
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th colspan=4>Rachel's Delite</th>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>Strawberry</td>
+                            <td class="plus">&nbsp;</td>
+                            <td>Banana
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan=4>Spiderman</th>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>Polar Punch</td>
+                            <td class="plus">&nbsp;</td>
+                            <td>Strawberry Cheesecake
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th colspan=4>The Hulk</th>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>Green Apple</td>
+                            <td class="plus">&nbsp;</td>
+                            <td>Margarita</td>
+                        </tr>
+
+                        <tr>
+                            <th colspan=4>Tie-Dye</th>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>Pinapple</td>
+                            <td class="plus">&nbsp;</td>
+                            <td>Blue-Hawaiian</td>
+                        </tr>
+
+                        <tr>
+                            <th colspan=4>Triple</th>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>Nectar</td>
+                            <td class="plus">&nbsp;</td>
+                            <td>Cream</td>
+                        </tr>
+                    </tbody>
+                </table> -->
+            </div>
+            <!--end of maincol-->
+
+            <footer>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="menu.html" class="active">Menu</a>
+                    </li>
+                    <li>
+                        <a href="location.html">Directions</a>
+                    </li>
+                </ul>
+            </footer>
+
+        </div>
+    </div>
+    <!--end of wrapper-->
+
+</body>
+
+</html>
