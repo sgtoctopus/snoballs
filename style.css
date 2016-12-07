@@ -238,12 +238,22 @@ footer a {
 }
 
 footer a:hover {
-    background-color: rgb(17, 180, 203);
     color: rgb(228, 223, 108);
 }
 
 footer a.active {
     font-weight: bold;
+}
+
+footer #stevie {
+    font-size: .65em;
+    letter-spacing: .15em;
+    margin: .25em;
+}
+
+footer #stevie a {
+    display: inline;
+    font-size: 1em;
 }
 
 
