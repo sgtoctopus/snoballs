@@ -231,12 +231,6 @@ footer li {
     font-size: .8em;
 }
 
-footer a {
-    text-decoration: none;
-    display: block;
-    transition: .3s background-color;
-}
-
 footer a:hover {
     color: rgb(228, 223, 108);
 }
