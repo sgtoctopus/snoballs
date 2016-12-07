@@ -249,6 +249,7 @@ footer #stevie {
     font-size: .65em;
     letter-spacing: .15em;
     margin: .25em;
+    display: inline-block;
 }
 
 footer #stevie a {
